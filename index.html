@@ -84,8 +84,7 @@ nav {
 .kunden-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
 .kunden-label { font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase; color: #aab; font-weight: 700; margin-bottom: 2rem; }
 .kunden-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center; }
-.kunden-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.55; transition: opacity 0.3s; min-width: 80px; }
-.kunden-item:hover { opacity: 1; }
+.kunden-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.55; min-width: 80px; }
 .kunden-icon { font-size: 2rem; }
 .kunden-name { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--navy); }
 
@@ -94,8 +93,7 @@ nav {
    ============================================================ */
 .services-bg { background: var(--navy); padding: 6rem 2rem; color: white; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2rem; margin-top: 3rem; }
-.service-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 2px; transition: 0.3s; }
-.service-card:hover { border-color: var(--gold); }
+.service-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 2px; }
 .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
 .service-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--white); }
 .service-desc { font-size: 0.88rem; opacity: 0.6; line-height: 1.6; }
@@ -108,32 +106,9 @@ nav {
 .process-grid::before { content: ''; position: absolute; top: 2.5rem; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--gold), var(--blue)); z-index: 0; }
 @media (max-width: 768px) { .process-grid::before { display: none; } }
 .process-step { text-align: center; position: relative; z-index: 1; }
-.step-number { width: 5rem; height: 5rem; border-radius: 50%; background: var(--navy); color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 3px solid var(--gold); transition: all 0.3s; }
-.process-step:hover .step-number { background: var(--gold); color: var(--navy); }
+.step-number { width: 5rem; height: 5rem; border-radius: 50%; background: var(--navy); color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 3px solid var(--gold); }
 .step-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; }
 .step-desc { font-size: 0.88rem; color: #666; line-height: 1.6; }
-
-/* ============================================================
-   KALKULAČKA
-   ============================================================ */
-.calc-section { background: var(--cream); padding: 6rem 2rem; }
-.calc-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 350px; gap: 2rem; }
-@media (max-width: 850px) { .calc-container { grid-template-columns: 1fr; } }
-.calc-card { background: var(--white); padding: 2rem; border-top: 3px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-.calc-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 1.2rem; color: var(--navy); margin-top: 1.5rem; }
-.calc-title:first-child { margin-top: 0; }
-.calc-options { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem; }
-.calc-option { display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid #e0e5f0; cursor: pointer; transition: 0.3s; border-radius: 2px; }
-.calc-option.selected { border-color: var(--navy); background: #f0f3fa; }
-.calc-option input { display: none; }
-.qty-control { display: flex; align-items: center; gap: 1rem; margin-top: 0.5rem; }
-.qty-btn { width: 40px; height: 40px; border: 1px solid var(--navy); background: none; cursor: pointer; font-weight: 700; font-size: 1.2rem; transition: 0.2s; }
-.qty-btn:hover { background: var(--navy); color: white; }
-.qty-input { width: 70px; text-align: center; padding: 0.5rem; border: 1px solid #ddd; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 1rem; }
-.result-box { background: var(--navy); color: white; padding: 2.5rem; border-radius: 2px; height: fit-content; }
-.result-row { display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; opacity: 0.9; }
-.result-total { border-top: 1px solid var(--gold); margin-top: 1.5rem; padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-.total-price { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.8rem; }
 
 /* ============================================================
    FAQ
@@ -226,7 +201,6 @@ footer { background: #0f1730; padding: 2rem; text-align: center; color: rgba(255
     <li><a href="#ueber-uns">Über uns</a></li>
     <li><a href="#leistungen">Leistungen</a></li>
     <li><a href="#prozess">Ablauf</a></li>
-    <li><a href="#rechner">Preisrechner</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
@@ -342,60 +316,6 @@ footer { background: #0f1730; padding: 2rem; text-align: center; color: rgba(255
   </div>
 </section>
 
-<!-- ============================================================
-     KALKULAČKA
-     ============================================================ -->
-<section class="calc-section" id="rechner">
-  <div class="section" style="padding: 0; margin-bottom: 3rem;">
-    <div class="section-label">Preiskalkulation</div>
-    <h2 class="section-title">Preisrechner</h2>
-    <p class="section-text">Erhalten Sie eine sofortige Orientierung für Ihr Projekt.</p>
-  </div>
-  <div class="calc-container">
-    <div class="calc-main">
-      <div class="calc-card">
-        <div class="calc-title">1. Motivgröße</div>
-        <div class="calc-options" id="size-options">
-          <label class="calc-option selected" onclick="selectOption('size','small',this)">
-            <input type="radio" name="size" value="small" checked>
-            <span><strong>Klein (bis 10×10 cm)</strong><br><small style="opacity:0.6;">Brust-Logos, Ärmel</small></span>
-          </label>
-          <label class="calc-option" onclick="selectOption('size','medium',this)">
-            <input type="radio" name="size" value="medium">
-            <span><strong>Mittel (bis 25×10 cm)</strong><br><small style="opacity:0.6;">Rücken-Schriftzüge</small></span>
-          </label>
-        </div>
-        <div class="calc-title">2. Motivtyp</div>
-        <div class="calc-options" id="prog-options">
-          <label class="calc-option selected" onclick="selectOption('prog','standard',this)">
-            <input type="radio" name="prog" value="standard" checked>
-            <span><strong>Text / Standardschrift</strong><br><small style="opacity:0.6;">Einfache Namen oder Sätze</small></span>
-          </label>
-          <label class="calc-option" onclick="selectOption('prog','logo',this)">
-            <input type="radio" name="prog" value="logo">
-            <span><strong>Individuelles Logo</strong><br><small style="opacity:0.6;">Firmen- oder Vereinslogos</small></span>
-          </label>
-        </div>
-        <div class="calc-title">3. Stückzahl</div>
-        <div class="qty-control">
-          <button class="qty-btn" onclick="changeQty(-1)">−</button>
-          <input type="number" class="qty-input" id="qty" value="1" min="1" oninput="calculate()">
-          <button class="qty-btn" onclick="changeQty(1)">+</button>
-        </div>
-      </div>
-    </div>
-    <div class="result-box">
-      <h3 style="margin-bottom: 1.5rem; color: var(--gold); font-family: 'Playfair Display', serif;">Kalkulation</h3>
-      <div class="result-row"><span>Stückpreis:</span><span id="r-per-piece">€ 15,00</span></div>
-      <div class="result-row"><span>Menge:</span><span id="r-qty">1 Stück</span></div>
-      <div class="result-row"><span>Stickkosten:</span><span id="r-stick">€ 15,00</span></div>
-      <div class="result-row"><span>Programmierung:</span><span id="r-prog">€ 25,00</span></div>
-      <div class="result-total"><span>Gesamt:</span><span class="total-price" id="r-total">€ 40,00</span></div>
-      <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 1rem; line-height: 1.5;">*Preise exkl. MwSt. Endpreis abhängig von Detailgrad. Programmierungskosten fallen nur einmalig an.</p>
-      <a href="#kontakt" class="btn btn-primary" style="display: block; text-align: center; margin-top: 1.5rem;">Jetzt anfragen</a>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      FAQ
@@ -523,14 +443,15 @@ footer { background: #0f1730; padding: 2rem; text-align: center; color: rgba(255
       </div>
       <div class="contact-item"><div class="contact-icon">💬</div><a href="https://wa.me/436603512557" target="_blank">WhatsApp Nachricht</a></div>
       <div class="contact-item"><div class="contact-icon">✉️</div><a href="mailto:g.l.stickerei@gmail.com">g.l.stickerei@gmail.com</a></div>
-      <div class="contact-item"><div class="contact-icon">📸</div><a href="https://instagram.com/gamal.lisa" target="_blank">@gamal.lisa</a></div>
+      <div class="contact-item"><div class="contact-icon">📸</div><a href="https://instagram.com/gamal.lisa" target="_blank">Instagram: @gamal.lisa</a></div>
+      <div class="contact-item"><div class="contact-icon">🎵</div><a href="https://www.tiktok.com/@gamal.lisa" target="_blank">TikTok: @gamal.lisa</a></div>
       <div class="contact-item"><div class="contact-icon">🕐</div>
         <div>
           <strong style="color:white;">Mo – Fr:</strong> 09:00 – 18:00 Uhr<br>
           <strong style="color:white;">Sa:</strong> Nach Vereinbarung
         </div>
       </div>
-      <div class="contact-item"><div class="contact-icon">📍</div><span>Allerheiligenplatz 13, 1200 Wien</span></div>
+      <div class="contact-item"><div class="contact-icon">📍</div><a href="https://www.google.com/maps/search/?api=1&query=Allerheiligenplatz+13+1200+Wien" target="_blank">Allerheiligenplatz 13, 1200 Wien</a></div>
     </div>
     <div class="contact-form-wrap">
       <form action="https://formspree.io/f/xvzllqpj" method="POST">
@@ -538,6 +459,7 @@ footer { background: #0f1730; padding: 2rem; text-align: center; color: rgba(255
         <div class="form-group"><label>E-Mail</label><input type="email" name="email" required></div>
         <div class="form-group"><label>Nachricht</label><textarea name="message" rows="4" required></textarea></div>
         <button type="submit" class="form-submit">Senden</button>
+        <p style="font-size: 0.72rem; opacity: 0.5; margin-top: 0.8rem; line-height: 1.5;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer <a href="#" onclick="openImpressum(); return false;" style="color: var(--gold);">Datenschutzerklärung</a> zu. Ihre Daten werden nicht an Dritte weitergegeben.</p>
       </form>
     </div>
   </div>
@@ -604,44 +526,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:
 L.marker([48.23592, 16.37255]).addTo(map)
   .bindPopup('G&L Stickerei<br>Allerheiligenplatz 13, 1200 Wien')
   .openPopup();
-
-/* --- Kalkulačka --- */
-const prices = {
-  size: { small: { base: 15, bulk10: 8, bulk20: 5.5 }, medium: { base: 25, bulk10: 17, bulk20: 12 } },
-  prog: { standard: 25, logo: 75 }
-};
-let selected = { size: 'small', prog: 'standard' };
-
-function selectOption(group, value, el) {
-  selected[group] = value;
-  document.querySelectorAll(`#${group}-options .calc-option`).forEach(o => o.classList.remove('selected'));
-  el.classList.add('selected');
-  calculate();
-}
-
-function changeQty(delta) {
-  const input = document.getElementById('qty');
-  let val = parseInt(input.value) + delta;
-  if (val < 1) val = 1;
-  input.value = val;
-  calculate();
-}
-
-function calculate() {
-  const qty = Math.max(1, parseInt(document.getElementById('qty').value) || 1);
-  const sizeData = prices.size[selected.size];
-  const progCost = prices.prog[selected.prog];
-  let perPiece = qty >= 20 ? sizeData.bulk20 : (qty >= 10 ? sizeData.bulk10 : sizeData.base);
-  const stickTotal = perPiece * qty;
-  const total = stickTotal + progCost;
-
-  document.getElementById('r-per-piece').textContent = `€ ${perPiece.toFixed(2).replace('.', ',')}`;
-  document.getElementById('r-qty').textContent = `${qty} Stück`;
-  document.getElementById('r-stick').textContent = `€ ${stickTotal.toFixed(2).replace('.', ',')}`;
-  document.getElementById('r-prog').textContent = `€ ${progCost.toFixed(2).replace('.', ',')}`;
-  document.getElementById('r-total').textContent = `€ ${total.toFixed(2).replace('.', ',')}`;
-}
-calculate();
 
 /* --- FAQ accordion --- */
 function toggleFaq(button) {
